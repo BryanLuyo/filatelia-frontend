@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-declare var $:any;
+import * as $ from "jquery";
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,13 +10,9 @@ declare var $:any;
 })
 
 
+
 export class AppComponent implements OnInit{
   ngOnInit(){
-     alert('Hola');
-  }
-
-  prueba() {
-     alert('Hola');
   }
 
   title = 'filatelia';
