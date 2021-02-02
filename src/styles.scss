@@ -391,7 +391,7 @@ body{
         margin-bottom: 65px;
     }
     .titulo{
-        margin-bottom: 19px;
+        margin-bottom: 23px;
     }
 }
 /*===============================
@@ -435,12 +435,21 @@ body{
 }
 
 .comenzar{
-    .owl-comenzar{
-        padding-top: 46px;
-        padding-bottom: 115px
-    }
+    .owl-nav{
+        .owl-prev,
+        .owl-next{
+            width: 85px;
+            height: 65px;
+        } 
+        .owl-prev{
+            left: -35px;
+        }
+        .owl-next{
+            right: -49px;
+        }
+    }      
     &__content{
-        padding:82px 11px;
+        padding:85px 11px 162px;
         position: relative;
         &:before{
             content: "";
@@ -519,6 +528,30 @@ body{
     left: 0;
     height: 100%;
     right: 0;
+    .owl-prev,
+    .owl-next{
+        position: absolute;
+        background-color: $mostaza !important;
+        width: 117px;
+        height: 90px;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 !important;
+        margin: auto !important;
+        color: $blanco;
+        background-size: 23% !important;
+        font-size: 40px !important;
+        background-image: url(assets/img/iconos/flecha.svg) !important;        
+        background-repeat: no-repeat !important;
+        background-position: 50% 50% !important;
+    }
+    .owl-prev{
+        left: -54px;            
+        transform: rotate(180deg);
+    }
+    .owl-next{
+    right: -54px;
+    }
     button{
         position: absolute;
         background-color: $mostaza !important;

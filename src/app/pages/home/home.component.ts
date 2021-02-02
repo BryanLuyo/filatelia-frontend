@@ -8,13 +8,30 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeComponent implements OnInit {
 
-  customOptions: OwlOptions = {
+  owl_comenzar: OwlOptions = {
     loop: true,
     dots: false,
     margin:5,
+    navText: ['', ''],
     responsive:{
       0:{
           items:1,
+      }
+    }
+  }
+
+  
+  owl_vendido: OwlOptions = {
+    loop: true,
+    dots: false,
+    margin:5,
+    navText: ['', ''],
+    responsive:{
+      0:{
+          items:1,
+      },
+      600:{
+        items:3,
       }
     }
   }
