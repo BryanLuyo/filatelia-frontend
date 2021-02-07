@@ -1,3 +1,5 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -440,14 +442,14 @@ body{
         .owl-next{
             width: 85px;
             height: 65px;
-        } 
+        }
         .owl-prev{
             left: -35px;
         }
         .owl-next{
             right: -49px;
         }
-    }      
+    }
     &__content{
         padding:85px 11px 162px;
         position: relative;
@@ -541,12 +543,12 @@ body{
         color: $blanco;
         background-size: 23% !important;
         font-size: 40px !important;
-        background-image: url(assets/img/iconos/flecha.svg) !important;        
+        background-image: url(assets/img/iconos/flecha.svg) !important;
         background-repeat: no-repeat !important;
         background-position: 50% 50% !important;
     }
     .owl-prev{
-        left: -54px;            
+        left: -54px;
         transform: rotate(180deg);
     }
     .owl-next{
