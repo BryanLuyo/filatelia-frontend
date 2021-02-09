@@ -7,6 +7,7 @@ $negro:#2C2C2C;
 $amarillo:#FEF7A7;
 $blanco:#fff;
 $plomo:#C6C6C6;
+$plomoOscuro:#9B9696;
 $mostaza:#DAB74F;
 $roboto:'Roboto', sans-serif;
 $lato:'Lato', sans-serif;
@@ -251,12 +252,12 @@ body{
     padding:22px 40px;
     line-height: 30px;
     border-radius: 0;
-    min-width: 265px;
-    font-family: $prata;
+    min-width: 265px;    
     line-height: 30px;
     &--negro{
         background-color: $negro;
         color: $blanco;
+        font-family: $prata;
         font-size: 23px;
         border: 1px solid $negro!important;
         background: -webkit-gradient(linear, left top, right top, color-stop(50%,$blanco), color-stop(50%, $negro));
@@ -273,7 +274,28 @@ body{
             text-decoration: none;
         }
     }
-
+    &--plomo{
+        background-color: #F5F2F2;
+        color: $negro;
+        font-size: 22px;            
+        padding: 16px 26px;
+        font-family: $lato;
+        border: 1px solid  #F5F2F2!important;
+        background: -webkit-gradient(linear, left top, right top, color-stop(50%,$blanco), color-stop(50%, #F5F2F2));
+        background: linear-gradient(to right, transparent 50%,   #F5F2F2 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            background-color:transparent;
+            text-decoration: none;
+            color: $negro;
+            border: 1px solid  $negro!important;
+            background-position: left bottom;
+            text-decoration: none;
+        }
+    }
 }
 
 
@@ -699,6 +721,216 @@ body{
                 &:first-child{
                     color: $plomo;
                     text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+
+.dashboard{
+    &__color{
+        background-color:#F5F2F2;
+        height: 244px;
+        padding: 20px 0px;
+
+    }
+    &__tabs{
+        margin-top: 73px;
+        padding-left: 18px;
+        a{
+            color: $negro;
+            font-size: 25px;
+            font-family: $DMregular;
+            padding: 0px 43px;
+            position: relative;
+            display: inline-block;
+            &:last-child{
+                padding-right: 0;
+            }
+            img{
+                position: absolute;                
+                top: 10px;
+            }
+            span{
+                display: block;
+                margin-left: 30px;
+            }
+        }
+    }
+    &__contenido{
+        padding: 21px 0px;
+        p{
+            font-size: 35px;
+            font-family: $DMregular;
+        }
+        table{
+            margin-top: 53px;
+            margin-bottom: 100px;
+            thead{
+                tr{
+                   
+                    th{
+                        font-size: 20px;
+                        font-family: $DMregular;
+                        border-bottom:1px solid transparent;
+                        border-top: 1px solid transparent;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    th{
+                        border-top:1px solid #c5c5c5;
+                        padding: 16px 10px; 
+                    }
+                    td{
+                        font-size: 22px;
+                        font-family: $lato;
+                        color: $plomoOscuro;
+                        padding: 16px 10px;
+                        border-top:1px solid #c5c5c5;
+                        position: relative;
+                        &:first-child{
+
+                        }
+                        img{
+                            width: 40px;
+                            position: absolute;
+                            top: 10px;
+                        }
+                        button{
+                            line-height: 18px;
+                            background-color: transparent;
+                            border: 1px solid transparent;
+                            img{
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .botones{
+            margin-top: 35px;
+            a{
+                text-align: left;
+                min-width: 257px;
+                position: relative;
+                margin-right: 20px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                img{
+                    position: absolute;
+                    right: 28px;
+                }
+            }
+        }
+    }
+}
+
+.formulario{
+    &__content{
+        padding: 74px 121px 54px 121px;
+        &__form{
+            margin-top: 43px;
+            form{
+                span{
+                    text-align: right;
+                    display: block; 
+                    margin-top: 18px;
+                    line-height: 39px;               
+                } 
+                .btn{
+                    margin-top: 25px;
+                    min-width: auto;                 
+                    width: 100%;
+                }
+               .form{                   
+                   &-group{
+                        margin-bottom: 8px;
+                        label{
+                            color: $plomoOscuro;
+                            font-size: 25px;
+                            font-family: $DMregular;
+                        }
+                        input{
+                            height: 63px;
+                            border-radius: 0;
+                            color: $negro;
+                            font-family: $lato;
+                            padding: 10px;
+                            font-size: 22px;
+                            border:1px solid $plomo;
+                            &:focus{
+                                border-color:$negro;
+                                box-shadow:0 0 0 0.2rem rgba(44, 44, 44, 0.19);
+                            }
+                        }
+                   }
+               } 
+            }
+        }
+        p{
+           font-size: 35px;            
+           margin-top: 16px;
+           line-height: 48px;
+           margin-bottom: 39px;
+           font-family: $DMregular;
+        }
+        span{
+            color: #9B9696;
+            font-family: $DMregular;
+            font-size: 25px;
+            line-height: 34px;
+            width: 97%;
+            display: block;
+            a{
+                color: $negro;
+            }
+        }
+    }
+    &__img{
+        width: 100%;
+        background-position: center;
+        height: 98vh;
+        position: relative;
+        background-size: cover;    
+        /*&:before{
+            content: "";
+            width: 100%;
+            height: 60%;
+            bottom: 0;
+            position: absolute;
+            background: transparent linear-gradient(180deg, #F8EA8300 0%, #FEF7A7 100%) 0% 0% no-repeat padding-box;
+        }*/
+        &__content{
+            position: absolute;
+            &--botom{
+                bottom: 3rem;
+                width: 79%;
+                left: 2.5rem;
+                p{
+                    font-size: 35px;
+                    font-family: $DMregular;
+                    color: $negro;
+                    margin-top: 23px;
+                    line-height: 48px;
+                    width: 90%;
+                }
+            }
+            &--top{
+                top:3.8rem;
+                width: 79%;
+                left: 2.5rem;
+                p{
+                    font-size: 35px;
+                    font-family: $DMregular;
+                    color: $negro;
+                    margin-top: 23px;
+                    line-height: 48px;
+                    width: 90%;
                 }
             }
         }

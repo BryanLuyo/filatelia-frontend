@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { HomeComponent } from './pages/home/home.component';
+import { RegistrateComponent } from './pages/registrate/registrate.component';
+import { IniciarComponent } from './pages/iniciar/iniciar.component';
+import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
 
 const routes: Routes = [
     {
@@ -13,6 +16,18 @@ const routes: Routes = [
     {
       path: "tienda",
       component:TiendaComponent
+    },
+    {
+      path: "registrate",
+      component:RegistrateComponent
+    },
+    {
+      path: "iniciarsesion",
+      component:IniciarComponent
+    },
+    {
+      path: "dashboard-user",
+      component:DashboardUserComponent
     }
 ];
 
