@@ -476,7 +476,7 @@ body{
         padding:85px 11px 162px;
         position: relative;
         &:before{
-            content: "";
+            content: ""; 
             width: 216px;
             height: 208px;
             left: -264px;
@@ -486,7 +486,7 @@ body{
             background-size: cover;
             background-repeat: no-repeat;
             background-image: url(assets/img/iconos/raya-vertical.svg);
-        }
+        } 
     }
 }
 
@@ -539,6 +539,93 @@ body{
         .item{
             padding:16px 7px;
         }
+    }
+}
+
+
+.buscador{
+    width: 50%;
+    float: right;
+    margin-top: 20px;
+    &__content{
+        position: relative;
+        input{
+            height: 68px;
+            background-color: $blanco;                        
+            height: 52px;
+            border:1px solid $plomo;
+            border-radius: 0;   
+            width: 100%;                  
+            padding: 6px 62px 6px 20px;   
+            &:focus{
+                border:transparent;
+                box-shadow: 1px 3px 4px transparent;
+            }
+            &:active{
+                box-shadow: 1px 3px 4px transparent;
+            }
+        }
+        button{
+            right:1px;
+            top: 1px;
+            background-color: $blanco;
+            border:1px solid transparent;
+            position: absolute;            
+            width: 75px;
+            height: 50px;            
+        }
+    }
+}
+
+.buscadorTop{
+    padding: 62px 0px 56px;
+    &__migas{ 
+        h2{
+            display: inline-block;
+            margin-left: 100px;
+        }
+        .boton{ 
+            width: 70px;
+            height: 70px;
+            background-color: $negro;
+            border-radius: 50%;
+            transform: rotate(180deg);            
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{                               
+                width: 30px;
+                fill:$blanco;
+            }
+        }
+        ul{
+            display: inline-block;            
+            li{
+                display: inline-block;
+                font-size: 35px;
+                font-family: $DMregular;                                
+                position: relative;
+                &:last-child{
+                    padding-left: 83px;
+                }
+                &:last-child:before{
+                    content: "";
+                    width: 25px;
+                    height: 25px;
+                    left: 32px;
+                    top: 15px;                   
+                    position: absolute;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url(assets/img/iconos/flechaMostaza.svg);
+                }
+                a{
+                    color: $negro;
+                }
+            }
+        }
+        
     }
 }
 
@@ -733,7 +820,36 @@ body{
         background-color:#F5F2F2;
         height: 244px;
         padding: 20px 0px;
-
+        &__nombre{   
+            padding-top:49px;   
+            padding-bottom: 10px;      
+            h2{
+                display: inline-block;
+                margin-left: 95px;
+                line-height: 74px;
+            }
+            .boton{ 
+                width: 70px;
+                height: 70px;
+                background-color: $negro;
+                border-radius: 50%;
+                transform: rotate(180deg);            
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 63px;
+                left: 11px;
+                svg{                               
+                    width: 30px;
+                    fill:$blanco;
+                }
+            }
+        }
+        .buscador{
+            width: 27%;            
+            margin-top: 30px;
+        }
     }
     &__tabs{
         margin-top: 73px;
@@ -760,6 +876,47 @@ body{
     }
     &__contenido{
         padding: 21px 0px;
+        &__formulario{
+            margin-top:38px;
+            form{
+                width: 82%;
+                margin-top: 33px;
+                span{
+                    text-align: right;
+                    display: block; 
+                    margin-top: 18px;
+                    line-height: 39px;               
+                } 
+                .btn{
+                    margin-top: 25px;
+                    min-width: auto;                 
+                    width: 100%;
+                }
+               .form{                   
+                   &-group{
+                        margin-bottom: 21px;
+                        label{
+                            color: $plomoOscuro;
+                            font-size: 25px;
+                            font-family: $DMregular;
+                        }
+                        input{
+                            height: 52px;
+                            border-radius: 0;
+                            color: $negro;
+                            font-family: $lato;
+                            padding: 10px;
+                            font-size: 22px;
+                            border:1px solid $plomo;
+                            &:focus{
+                                border-color:$negro;
+                                box-shadow:0 0 0 0.2rem rgba(44, 44, 44, 0.19);
+                            }
+                        }
+                   }
+               } 
+            }
+        }
         p{
             font-size: 35px;
             font-family: $DMregular;
@@ -783,6 +940,53 @@ body{
                     th{
                         border-top:1px solid #c5c5c5;
                         padding: 16px 10px; 
+                        .check{
+                            display: inline-block;
+                            margin-bottom:10px;
+                            &:last-child{
+                                margin-bottom:0px;
+                            }
+                            .botton{
+                              margin-top: 0;
+                            }
+                            input[type=checkbox].css-checkbox{
+                              display: none;
+                            }
+                            input[type=checkbox].css-checkbox + label.css-label {
+                              height: 21px;
+                              display: inline-block;
+                              line-height: 1.25rem;
+                              font-size: 18px;
+                              background-size: contain;
+                              font-family: $lato;
+                              color: $negro;
+                              padding-left: 27px;
+                              vertical-align: middle;
+                              margin-bottom:0px;
+                              cursor: pointer;
+                              -webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+                              -o-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+                              transition: background 300ms ease-in-out, color 300ms ease-in-out;
+                              span{
+                                  font-size: 15px;
+                                  color:  #9B9696;
+                              }
+                            }
+                            input[type=checkbox].css-checkbox + label.css-label {
+                                background-image: url("assets/img/iconos/ckeck-desactivado.png");
+                                background-repeat: no-repeat;
+                                background-position: 0 0;
+                             /* &:hover {
+                                background-image: url("../img/iconos/checked-activo.png");
+                                background-repeat: no-repeat;
+                              }*/
+                           }
+                           input[type=checkbox].css-checkbox:checked + label.css-label {
+                              background-image: url("assets/img/iconos/ckeck-activado.png");
+                              background-repeat: no-repeat;
+                              // color: #000;
+                           }                           
+                        }
                     }
                     td{
                         font-size: 22px;
@@ -791,9 +995,7 @@ body{
                         padding: 16px 10px;
                         border-top:1px solid #c5c5c5;
                         position: relative;
-                        &:first-child{
-
-                        }
+                       
                         img{
                             width: 40px;
                             position: absolute;
@@ -805,6 +1007,8 @@ body{
                             border: 1px solid transparent;
                             img{
                                 width: auto;
+                                position: relative;
+                                top: 0px;
                             }
                         }
                     }
@@ -1748,16 +1952,7 @@ body{
 }
 
 @media(min-width:1140px){
-    .header{
-        .buscador{
-            margin-top: 18px;
-        }
-        &__right{
-            .web{
-                margin-left: 16px;
-            }
-        }
-    }
+    
 }
 
 @media(min-width:1200px){
@@ -1804,10 +1999,7 @@ body{
     }
 
     .header{
-        .buscador{
-            width: 80%;
-            margin-top: 14px;
-        }
+        
         &__left{
             &__link{
                 ul{
