@@ -274,6 +274,26 @@ body{
             text-decoration: none;
         }
     }
+    &--linea{
+        background-color: transparent;
+        color: $negro;
+        font-family: $prata;
+        font-size: 23px;
+        border: 1px solid $negro;        
+        background: -webkit-gradient(linear, left top, right top, color-stop(50%,$negro), color-stop(50%, transparent));
+        background: linear-gradient(to right, $negro 50%,  transparent 50%);
+        background-size: 201% 100%;
+        background-position: right bottom;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            background-color:transparent;
+            text-decoration: none;
+            color: $blanco;
+            background-position: left bottom;
+            text-decoration: none;
+        }
+    }
     &--plomo{
         background-color: #F5F2F2;
         color: $negro;
@@ -876,46 +896,133 @@ body{
     }
     &__contenido{
         padding: 21px 0px;
-        &__formulario{
-            margin-top:38px;
-            form{
-                width: 82%;
-                margin-top: 33px;
-                span{
-                    text-align: right;
-                    display: block; 
-                    margin-top: 18px;
-                    line-height: 39px;               
-                } 
-                .btn{
-                    margin-top: 25px;
-                    min-width: auto;                 
+        form{                        
+            span{
+                text-align: right;
+                display: block; 
+                margin-top: 18px;
+                line-height: 39px;               
+            } 
+            .btn{                
+                min-width: auto;                 
+                width: 100%;
+            }
+           .form{     
+                width: 82%;    
+                margin-top: 33px;  
+                button{
                     width: 100%;
-                }
-               .form{                   
-                   &-group{
-                        margin-bottom: 21px;
-                        label{
-                            color: $plomoOscuro;
+                }        
+               &-group{
+                    margin-bottom: 21px;
+                    .nhabep {
+                        position: relative;                        
+                        user-select: none;
+                        margin-bottom: 9px;
+                        margin-top: 15px;
+                        &__check{
+                            margin-left: 274px;
+                        }
+                        span{
+                            color: $plomo;
+                            position: absolute;
                             font-size: 25px;
+                            top: -12px;
+                            margin: 0;
                             font-family: $DMregular;
                         }
-                        input{
-                            height: 52px;
-                            border-radius: 0;
-                            color: $negro;
-                            font-family: $lato;
-                            padding: 10px;
-                            font-size: 22px;
-                            border:1px solid $plomo;
-                            &:focus{
-                                border-color:$negro;
-                                box-shadow:0 0 0 0.2rem rgba(44, 44, 44, 0.19);
-                            }
+                        &-checkbox{
+                            display: none;
+                        }     
+                        &-label {
+                            display: block; overflow: hidden; cursor: pointer;
+                            border: 2px solid #999999; border-radius: 20px;
+                        }  
+                        &-inner {
+                            display: block; width: 200%; margin-left: -100%;
+                            transition: margin 0.3s ease-in 0s;
+                        } 
+                        &-inner:before, &-inner:after {
+                            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+                            font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+                            box-sizing: border-box;
+                        }               
+                        input.toggle-flat + label {
+                            padding: 2px;
+                            width: 43px;
+                            height: 25px;
+                            background-color:$plomoOscuro;
+                            border-radius: 60px;
+                            transition: background 0.4s;
+                          }
+                          input.toggle-flat + label:before,
+                          input.toggle-flat + label:after {
+                            display: block;
+                            position: absolute;
+                            content: "";
+                          }
+                          input.toggle-flat + label:before {
+                            top: 3px;
+                            left: 3px;
+                            bottom: 3px;
+                            right: 3px;
+                            background-color: $blanco;
+                            border-radius: 60px;
+                            transition: background 0.4s;
+                          }
+                          input.toggle-flat + label:after {
+                            top: 5px;
+                            left: 7px;
+                            bottom: 6px;
+                            width: 14px;
+                            background-color: $plomoOscuro;
+                            border-radius: 60px;
+                            transition: margin 0.4s, background 0.4s;
+                          }
+                          input.toggle-flat:checked + label {
+                            background-color: $mostaza;
+                          }
+                          input.toggle-flat:checked + label:after {
+                            margin-left: 15px;
+                            background-color:$mostaza;
+                          }
+                        .toggle{
+                            position: absolute;
+                            margin-left:-9999px;
+                            visibility: hidden;                            
                         }
-                   }
-               } 
-            }
+                        .toggle + label{
+                            display: block;
+                            position: relative;
+                            cursor: pointer;
+                            outline: none;
+                            user-select: none;
+                        }
+                        
+                    }
+                    label{
+                        color: $plomoOscuro;
+                        font-size: 25px;
+                        font-family: $DMregular;
+                    }
+                    input{
+                        height: 52px;
+                        border-radius: 0;
+                        color: $negro;
+                        font-family: $lato;
+                        padding: 10px;
+                        font-size: 22px;
+                        border:1px solid $plomo;
+                        &:focus{
+                            border-color:$negro;
+                            box-shadow:0 0 0 0.2rem rgba(44, 44, 44, 0.19);
+                        }
+                    }
+               }
+           } 
+        }
+        &__formulario{
+            margin-top:38px;            
         }
         p{
             font-size: 35px;
