@@ -18,11 +18,11 @@ const routes: Routes = [
       component:TiendaComponent
     },
     {
-      path: "registrate",
+      path: "auth/register",
       component:RegistrateComponent
     },
     {
-      path: "iniciarsesion",
+      path: "auth/login",
       component:IniciarComponent
     },
     {

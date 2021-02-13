@@ -4,11 +4,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MancolistaComponent } from './mancolista/mancolista.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, MancolistaComponent, ConfiguracionComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports : [
     HeaderComponent,
