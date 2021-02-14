@@ -27,7 +27,8 @@ const routes: Routes = [
     },
     {
       path: "dashboard-user",
-      component:DashboardUserComponent
+      component:DashboardUserComponent,
+      loadChildren: () => import('./user/user.routing').then( m => m.UserRoutingModule )
     }
 ];
 
