@@ -6,7 +6,7 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistrateComponent } from './pages/registrate/registrate.component';
 import { IniciarComponent } from './pages/iniciar/iniciar.component';
-import { DashboardUserComponent } from './user/dashboard-user/dashboard-user.component';
+import { UserRoutingModule } from './user/user.routing';
 
 const routes: Routes = [
     {
@@ -24,16 +24,14 @@ const routes: Routes = [
     {
       path: "auth/login",
       component:IniciarComponent
-    },
-    {
-      path: "dashboard-user",
-      component:DashboardUserComponent,
-      loadChildren: () => import('./user/user.routing').then( m => m.UserRoutingModule )
     }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    UserRoutingModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

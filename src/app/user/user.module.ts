@@ -1,6 +1,11 @@
 import { ComponentsModule } from './../components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+
+import { RouterModule } from '@angular/router';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -15,6 +20,7 @@ import { UserComponentsModule } from './components/user-components.module';
   imports: [
     BrowserAnimationsModule,
     CommonModule,
+    RouterModule,
     ComponentsModule,
     UserComponentsModule
   ]
