@@ -11,12 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { RegistrateComponent } from './registrate/registrate.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
-import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
-
-
 
 @NgModule({
-  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent, DashboardUserComponent],
+  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent],
   imports: [
     BrowserAnimationsModule,
     CommonModule,

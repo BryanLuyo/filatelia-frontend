@@ -6,7 +6,7 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistrateComponent } from './pages/registrate/registrate.component';
 import { IniciarComponent } from './pages/iniciar/iniciar.component';
-import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
+import { DashboardUserComponent } from './user/dashboard-user/dashboard-user.component';
 
 const routes: Routes = [
     {
