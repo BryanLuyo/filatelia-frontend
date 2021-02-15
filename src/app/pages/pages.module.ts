@@ -13,9 +13,11 @@ import { RegistrateComponent } from './registrate/registrate.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { CatalogoInternoComponent } from './catalogo-interno/catalogo-interno.component';
 
 @NgModule({
-  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent, PagesComponent],
+  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent, PagesComponent, CatalogoComponent, CatalogoInternoComponent],
   imports: [
     BrowserAnimationsModule,
     RouterModule,
