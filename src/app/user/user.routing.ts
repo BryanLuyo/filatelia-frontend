@@ -8,7 +8,7 @@ import { TiendauserComponent } from './components/tiendauser/tiendauser.componen
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: 'user/dashboard',
     component: DashboardUserComponent,
     children: [
         { path: '', component: SubastaComponent },
