@@ -11,11 +11,14 @@ import { HomeComponent } from './home/home.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { RegistrateComponent } from './registrate/registrate.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
+import { PagesComponent } from './pages.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent],
+  declarations: [HomeComponent, TiendaComponent, RegistrateComponent, IniciarComponent, PagesComponent],
   imports: [
     BrowserAnimationsModule,
+    RouterModule,
     CommonModule,
     ComponentsModule,
     CarouselModule,

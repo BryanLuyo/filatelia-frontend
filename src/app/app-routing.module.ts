@@ -7,30 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegistrateComponent } from './pages/registrate/registrate.component';
 import { IniciarComponent } from './pages/iniciar/iniciar.component';
 import { UserRoutingModule } from './user/user.routing';
+import { PagesRoutingModule } from './pages/pages.routing';
 
-const routes: Routes = [
-    {
-      path:"",
-      component:HomeComponent
-    },
-    {
-      path: "tienda",
-      component:TiendaComponent
-    },
-    {
-      path: "auth/register",
-      component:RegistrateComponent
-    },
-    {
-      path: "auth/login",
-      component:IniciarComponent
-    }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    UserRoutingModule
+    UserRoutingModule,
+    PagesRoutingModule
   ],
   exports: [RouterModule]
 })

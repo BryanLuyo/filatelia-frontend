@@ -5,6 +5,7 @@ import { MancolistaComponent } from './mancolista/mancolista.component';
 import { RouterModule } from '@angular/router';
 import { SubastaComponent } from './subasta/subasta.component';
 import { TiendauserComponent } from './tiendauser/tiendauser.component';
+import { HeaderUserComponent } from './header-user/header-user.component';
 
 
 
@@ -13,11 +14,15 @@ import { TiendauserComponent } from './tiendauser/tiendauser.component';
      ConfiguracionComponent,
      MancolistaComponent,
      SubastaComponent,
-     TiendauserComponent
+     TiendauserComponent,
+     HeaderUserComponent
   ],
   exports : [
     ConfiguracionComponent,
-    MancolistaComponent
+    MancolistaComponent,
+    HeaderUserComponent,
+    SubastaComponent,
+    TiendauserComponent
   ],
   imports: [
     CommonModule,
