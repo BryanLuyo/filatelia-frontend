@@ -7,19 +7,22 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserModule } from './user/user.module';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentsModule,
+    ComponentsModule, 
     PagesModule,
     UserModule,
-    NgbModule
+    NgbModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
