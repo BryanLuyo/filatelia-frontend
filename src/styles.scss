@@ -197,7 +197,10 @@ body{
                     border-top: 1px solid transparent;
                     font-size: 15px;
                 }
-                td{
+                td{                                        
+                    .temas{
+                        width: 30px;
+                    }
                     .pais{
                         width: 30px;
                     }

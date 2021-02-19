@@ -18,5 +18,5 @@ export class PaisCatalogoComponent implements OnInit {
     this.modalService.open(content, { centered: true, windowClass: "modal__admin"});
 
   }
-
+ 
 }
