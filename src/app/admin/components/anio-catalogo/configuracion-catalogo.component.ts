@@ -19,8 +19,9 @@ export class ConfiguracionCatalogoComponent{
     closeResult?: string;
      
     openVerticallyCentered(content : any) {
-      this.modalService.open(content, { centered: true });
+      this.modalService.open(content, { centered: true, windowClass: "modal__admin"});
+
     }
 
 }
-
+ 

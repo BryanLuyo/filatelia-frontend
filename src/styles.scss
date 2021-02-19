@@ -103,6 +103,29 @@ body{
     &__admin{
         .modal-header{
             background-color: $negro;
+            color: $blanco;
+            font-family: $lato;
+            font-size: 22px;
+            border-radius: 0px;
+        }
+        .modal-body{
+            padding: 30px 40px;
+            form{
+                label{
+                    font-size: 23px;
+                    font-family: $DMregular;
+                    color: $plomoOscuro;
+                }
+                input{
+                    height: 63px;
+                    border-radius: 0;
+                    color: $negro;
+                    font-family: $lato;
+                    padding: 10px;
+                    font-size: 22px;
+                    border: 1px solid $plomo;
+                }
+            }
         }
     }
 }
@@ -152,7 +175,7 @@ body{
             tr{
                 th{
                     color: $blanco;
-                    padding: 12px 10px;
+                    padding: 12px 20px;
                     font-size: 18px;
                     font-weight: lighter;
                     font-family: $DMregular;
@@ -175,10 +198,16 @@ body{
                     font-size: 15px;
                 }
                 td{
+                    .pais{
+                        width: 30px;
+                    }
                     &.editar{
                         a{
                             display: inline-block;
                             padding: 0px 10px;
+                            img{
+                                width: auto;
+                            }
                         }
                     }
                     &:last-child{

@@ -12,7 +12,7 @@ const routes: Routes = [];
   
   RouterModule.forRoot(routes),
     UserRoutingModule,
-    PagesRoutingModule,
+    PagesRoutingModule, 
     AdminRoutingModule
   ],
   exports: [RouterModule]
